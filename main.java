@@ -8,13 +8,15 @@ public class main{
     myList.addLast(3);
     myList.traversal();
     System.out.println();
-    System.out.println(myList.first());
-    System.out.println(myList.last());
+    System.out.println("the first element is: "+myList.first());
+    System.out.println("the last element is: "+myList.last());
+    System.out.println("the size is: "+myList.size());
     myList.removeFirst();
     myList.traversal();
     System.out.println();
-    System.out.println(myList.first());
-    System.out.println(myList.last());
+    System.out.println("the first element is: "+myList.first());
+    System.out.println("the last element is: "+myList.last());
+    System.out.println("the size is: "+myList.size());
 
 
   } 
