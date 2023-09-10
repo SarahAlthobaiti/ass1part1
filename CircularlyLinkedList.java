@@ -48,7 +48,7 @@ public class CircularlyLinkedList<E>{
         Node<E> c = tail.getNext();
         if (tail != null){
             do{
-                System.out.println(c.getElement());
+                System.out.print(c.getElement());
                 c = c.getNext();
               
             }while(c != tail.getNext());
