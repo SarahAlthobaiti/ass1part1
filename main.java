@@ -1,9 +1,5 @@
-
 //Student Name: Sarah Mohammed Althobiti  Student ID: 444004881
 import java.util.Scanner;
-
-import javax.sound.midi.Soundbank;
-
 public class main {
  public static void main(String[] args) {
     CircularlyLinkedList<Integer> myList = new CircularlyLinkedList<>();
