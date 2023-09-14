@@ -48,11 +48,12 @@ public class CircularlyLinkedList<E>{
         Node<E> c = tail.getNext();
         if (tail != null){
             do{
-                System.out.print(c.getElement());
+                System.out.print(c.getElement()+ " ");
                 c = c.getNext();
               
             }while(c != tail.getNext());
         }
+        System.out.println();
     }
     public void addFirst(E e){
         if(isEmpty()){
@@ -80,6 +81,50 @@ public class CircularlyLinkedList<E>{
         }
         size--;
         return head.getElement();
+    }
+    public String cheakList(CircularlyLinkedList<E> M){
+          
+        Node c1=this.tail;
+        Node c2 = M.tail;
+       
+        while (c1.getElement()!=c2.getElement()){
+            c2=c2.getNext();
+        }
+        M.tail = c2;
+        c1=c1.getNext();
+        c2=c2.getNext();
+        
+        while(c1.getElement()!=tail.getElement() && c2.getElement()!= tail.getElement()){
+            
+            if(c1.getNext().getElement()==c2.getNext().getElement()){
+                c1=c1.getNext();
+                c2= c2.getNext();
+            }else{
+               
+                return "not seq";
+            }
+            
+            
+        }
+        return "it's seq";       
+   }
+   public boolean spilt(){
+    if(size % 2 != 0){
+        return false;
+    }else{
+        CircularlyLinkedList<E> m = new CircularlyLinkedList();
+        Node<E> c = tail.next;
+        int cheak = size / 2;
+        for(int i = cheak; i > 0; i--){
+            m.addLast(c.getElement());
+            removeFirst();
+            c = c.getNext();
+        }
+        m.traversal();
+        traversal();
+      }
+      return true;
+
     }
 
 }
