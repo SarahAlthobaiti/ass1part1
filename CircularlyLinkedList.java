@@ -109,7 +109,10 @@ public class CircularlyLinkedList<E>{
         return "it's seq";       
    }
    public boolean spilt(){
-    if(size % 2 != 0){
+    if(isEmpty()){
+        return false;
+    }
+    else if(size % 2 != 0){
         return false;
     }else{
         CircularlyLinkedList<E> m = new CircularlyLinkedList();
@@ -140,6 +143,7 @@ public class CircularlyLinkedList<E>{
                 c = c.getNext();
             }
             System.out.print(head.getElement());
+            System.out.println();
         }
 
     }

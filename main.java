@@ -2,20 +2,66 @@
 import java.util.Scanner;
 public class main {
  public static void main(String[] args) {
-    CircularlyLinkedList<Integer> L = new CircularlyLinkedList<>();
-   // CircularlyLinkedList<Integer> M = new CircularlyLinkedList<>();
-        L.addFirst(10);
-        L.addLast(20);
-        L.addLast(30);
-        L.addLast(40);
-        L.traversal();
-        L.printReverse();;
-        
-      /*M.addFirst(20);
-        M.addLast(30);
-        M.addLast(40);
-        M.addLast(10);
-        System.out.println(L.cheakList(M));*/
+    CircularlyLinkedList<Integer> myList = new CircularlyLinkedList<>();
+    Scanner scnr = new Scanner(System.in);
+    boolean flag = true;
+    while(flag){
+      System.out.println("1.Add new node to CLL");
+      System.out.println("2.Delete a node from CLL");
+      System.out.println("3.Show how many nodes in CLL");
+      System.out.println("4.Print all data in the Cll");
+      System.out.println("5.Rotat the nodes");
+      System.out.println("6.Exit");
+      int num = scnr.nextInt();
+      int key;
+      int number;
+      if(num == 1){
+       System.out.println("1. to add first ");
+       System.out.println("2. to add last");
+       number = scnr.nextInt();
+       if(number == 1){
+       System.out.println("enter the element to add");
+       key = scnr.nextInt();
+       myList.addFirst(key);
+       } else{
+         System.out.println("enter the element to add");
+         key = scnr.nextInt();
+         myList.addLast(key);
+         }
+
+    }else if(num == 2){
+      myList.removeFirst();
+    }else if(num == 3){
+      myList.size();
+    }else if(num == 4){
+      myList.traversal();
+    }else if(num == 5){
+      myList.rotate();
+    }else{
+      flag = false;
+    }
+
+
+  } 
+  System.out.println("the first element is: "+myList.first());
+  System.out.println("the last element is: "+myList.last()); 
+  ////////////////////////////////////////////////////////////////////
+
+  CircularlyLinkedList<Integer> l = new CircularlyLinkedList();
+  CircularlyLinkedList<Integer> m = new CircularlyLinkedList();
+  l.addFirst(10);
+  l.addLast(20);
+  l.addLast(30);
+  l.addLast(5);
+  m.addFirst(20);
+  m.addLast(30);
+  m.addLast(10);
+  System.out.println(l.cheakList(m));
+  l.printReverse();
+  System.out.println(m.spilt());
+  System.out.println(l.spilt());
+
+
         
 
 
