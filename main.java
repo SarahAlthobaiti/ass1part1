@@ -8,9 +8,10 @@ public class main {
         L.addLast(20);
         L.addLast(30);
         L.addLast(40);
-        L.spilt();
+        L.traversal();
+        L.printReverse();;
         
-      /*   M.addFirst(20);
+      /*M.addFirst(20);
         M.addLast(30);
         M.addLast(40);
         M.addLast(10);

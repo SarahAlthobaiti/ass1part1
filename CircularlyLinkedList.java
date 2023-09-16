@@ -126,5 +126,22 @@ public class CircularlyLinkedList<E>{
       return true;
 
     }
+    public void printReverse(){
+        if(isEmpty()){
+            System.out.println("the list is empty");
+        }else{
+            Node<E> head = tail.getNext();
+            Node<E> c = tail.getNext();
+            while(tail != head){
+                if(c.getNext() == tail){
+                    System.out.print(tail.getElement()+" ");
+                    tail = c;
+                }
+                c = c.getNext();
+            }
+            System.out.print(head.getElement());
+        }
+
+    }
 
 }
